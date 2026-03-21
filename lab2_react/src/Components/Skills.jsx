@@ -1,20 +1,57 @@
 function Skills() {
   return (
-    <section>
-      <h2>Skills & Languages</h2>
-      <h3>Technical Skills</h3>
-      <ul>
-        <li>Python, C (basics)</li>
-        <li>Linux/Unix operating systems</li>
-        <li>Networking knowledge</li>
-        <li>Databases (SQL)</li>
-        <li>Wireshark, Git</li>
-      </ul>
-      <h3>Languages</h3>
-      <ul>
-        <li><strong>Ukrainian:</strong> Native</li>
-        <li><strong>English:</strong> Upper Intermediate</li>
-      </ul>
+    <section className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#122143] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      
+      <h2 className="text-[#122143] text-2xl font-bold mb-6 border-b-2 border-slate-200 pb-2">
+        Skills & Languages
+      </h2>
+      
+      <div className="grid md:grid-cols-2 gap-8">
+        
+        <div>
+          <h3 className="text-lg font-bold text-[#122143] mb-4">Technical Skills</h3>
+          <div className="flex flex-wrap gap-2.5">
+            {['Python', 'C (basics)', 'Linux/Unix', 'Networking', 'Databases (SQL)', 'Wireshark', 'Git'].map((skill) => (
+              <span 
+                key={skill}
+                className="bg-slate-100 text-[#122143] px-3.5 py-1.5 rounded-full text-sm font-medium border border-slate-200 transition-colors hover:bg-slate-200"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-bold text-[#122143] mb-4">Languages</h3>
+          
+          <div className="space-y-5">
+            
+            <div>
+              <div className="flex justify-between items-baseline mb-1.5">
+                <span className="font-semibold text-slate-800">Ukrainian</span>
+                <span className="text-xs text-slate-500 font-medium">Native</span>
+              </div>
+              <div className="w-full bg-slate-100 rounded-full h-2">
+                <div className="bg-[#122143] h-2 rounded-full w-full"></div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-baseline mb-1.5">
+                <span className="font-semibold text-slate-800">English</span>
+                <span className="text-xs text-slate-500 font-medium">Upper Intermediate</span>
+              </div>
+              <div className="w-full bg-slate-100 rounded-full h-2">
+                <div className="bg-[#122143] h-2 rounded-full w-[80%]"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      
     </section>
   );
 }

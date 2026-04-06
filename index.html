@@ -9,6 +9,7 @@
 <body>
     <header class="hero-header">
         <h1>Karina Buival</h1>
+        <button id="theme-toggle" class="theme-btn">Dark Mode</button>
         <ul class="contact-info">
             <li><strong>Phone:</strong> +380676701982</li>
             <li><strong>Email:</strong> <a href="mailto:karina.buival.kb.2023@lpnu.ua">karina.buival.kb.2023@lpnu.ua</a></li>
@@ -56,10 +57,47 @@
                 <li>Cyber Security Summer Internship</li>
             </ul>
         </section>
+
+        <section class="card">
+            <h2>Employer Reviews</h2>
+            <div id="reviews-container">
+                <p>Loading reviews...</p>
+            </div>
+        </section>
+        
     </main>
 
     <footer class="main-footer">
         <p>&copy; 2026 Karina Buival. Lviv, Ukraine.</p>
+        <div id="system-info" style="margin-top: 10px; font-size: 0.9em; color: #64748b;"></div>
     </footer>
+
+    <button id="open-modal-btn" class="floating-contact-btn">Contact Me</button>
+
+    <div id="feedback-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Contact Me</h2>
+            
+            <form action="https://formspree.io/f/mojpyjqd" method="POST" class="feedback-form">
+                <label>Name:</label>
+                <input type="text" name="name" required>
+                
+                <label>Email:</label>
+                <input type="email" name="email" required>
+                
+                <label>Phone:</label>
+                <input type="tel" name="phone">
+                
+                <label>Message:</label>
+                <textarea name="message" rows="3" required></textarea>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
